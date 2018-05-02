@@ -19,21 +19,56 @@ namespace bagOfClassesUnitTests
         }
 
         [Theory]
-        [InlineData(3)]
-        [InlineData(5)]
+        [InlineData(1)]
+        [InlineData(2)]
         [InlineData(7)]
-        public void IsOddTestForOdds(int value)
+        [InlineData(193)]
+        [InlineData(269)]
+        public void isPrimeV0ShouldReturnTrueForPrimes(int value)
         {
-            Assert.True(IsOdd(value));
+            PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
+            Assert.True(primeFactorFinder.isPrimeV0(value));
         }
 
         [Theory]
-        [InlineData(2)]
         [InlineData(4)]
-        [InlineData(6)]
-        public void IsOddTestForEvens(int value)
+        [InlineData(21)]
+        [InlineData(33)]
+        [InlineData(49)]
+        [InlineData(100)]
+        [InlineData(174)]
+        public void isPrimeV0ShouldReturnFalseForNonPrimes(int value)
         {
-            Assert.False(IsOdd(value));
+            PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
+            Assert.False(primeFactorFinder.isPrimeV0(value));
+        }
+
+        [Theory]
+        [InlineData(37, 37)]
+        [InlineData(41, 123)]
+        [InlineData(7, 196)]
+        [InlineData(224069, 12547864)]
+        public void shouldReturnLargestPrimeFactor(int desiredResult, int input)
+        {
+            PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
+            bool rv = primeFactorFinder.findFactors(input);
+            int result = primeFactorFinder.largestPrimeFactor();
+            Assert.Equal(desiredResult, result);
+        }
+
+        
+        //isPrimeV2 testing 
+        /*
+        [Theory]
+        [InlineData(4)]
+        [InlineData(21)]
+        [InlineData(33)]
+        [InlineData(100)]
+        [InlineData(174)]
+        public void isPrimeV1ShouldReturnFalseForNonPrimes(int value)
+        {
+            PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
+            Assert.False(primeFactorFinder.isPrimeV1(value));
         }
 
         [Theory]
@@ -42,32 +77,12 @@ namespace bagOfClassesUnitTests
         [InlineData(7)]
         [InlineData(193)]
         [InlineData(269)]
-        public void primeFactorFinderIsPrimeTestPrimes(int value)
+        public void isPrimeV1ShouldReturnTrueForPrimes(int value)
         {
             PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
-            Assert.True(primeFactorFinder.isPrime(value));
+            Assert.True(primeFactorFinder.isPrimeV1(value));
         }
-
-        [Theory]
-        [InlineData(4)]
-        [InlineData(21)]
-        [InlineData(33)]
-        [InlineData(100)]
-        [InlineData(174)]
-        public void primeFactorFinderIsPrimeTestNotPrimes(int value)
-        {
-            PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
-            Assert.False(primeFactorFinder.isPrime(value));
-        }
-
-
-
-
-
-        bool IsOdd(int value)
-        {
-            return value % 2 == 1;
-        }
+        */
 
         int Add(int x, int y)
         {

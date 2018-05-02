@@ -13,67 +13,20 @@ namespace bagOfClasses
             Console.WriteLine("Hello World!");
 
             PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
+            //bool rv = primeFactorFinder.findFactors(196);
 
-            
-            bool rc = false;
+            bool rv = primeFactorFinder.isPrimeV0(49);
 
-            int A = 2;
+            int A = primeFactorFinder.largestPrimeFactor();
 
-            rc = primeFactorFinder.isPrime(A);
-            if (rc != true)
-            {
-                Console.WriteLine("Test 1 Failed");
-            }
-            else
-            {
-                Console.WriteLine("Test 1 Passed");
-            }
-
-            A = 4;
-            rc = primeFactorFinder.isPrime(A);
-            if (rc != false)
-            {
-                Console.WriteLine("Test 2 Failed");
-            }
-            else
-            {
-                Console.WriteLine("Test 2 Passed");
-            }
-
-            A = 13;
-            rc = primeFactorFinder.isPrime(A);
-            if (rc != true)
-            {
-                Console.WriteLine("Test 3 Failed");
-            }
-            else
-            {
-                Console.WriteLine("Test 3 Passed");
-            }
+            //var A = Math.Ceiling(Math.Sqrt(12));
 
 
 
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
         }
     }
 }
