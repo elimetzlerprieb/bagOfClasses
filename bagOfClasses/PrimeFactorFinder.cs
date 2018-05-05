@@ -8,28 +8,29 @@ namespace bagOfClasses
 {
     public class PrimeFactorFinder
     {
+        private Stack<long> factors = new Stack<long>();
 
-        public PrimeFactorFinder()
+        PrimeFinder primeFinder = new PrimeFinder();
+
+        public Stack<long> getPrimeFactors(long A)
         {
-            //Stack<int> primeFactors = new Stack<int>();
+            findFactors(A);
+            return factors;
         }
 
-        private Stack<int> primeFactors = new Stack<int>();
-
-
-        
-        public int largestPrimeFactor()
+        public long getLargestPrimeFactor(long A)
         {
-            return primeFactors.Max();
+            findFactors(A);
+            return factors.Max();
         }
 
-        public bool findFactors(int A)
+        private bool findFactors(long A)
         {
             // base case : A is prime therefore A is a factor 
 
-            if (isPrimeV0(A) == true)
+            if(primeFinder.isPrime(A) == true)
             {
-                primeFactors.Push(A);
+                factors.Push(A);
                 return true;
             }
             else // non base case : if A is not a prime, we need to find the next prime that can divide it
@@ -39,13 +40,13 @@ namespace bagOfClasses
                 while ( i < (A / 2))
                 {
                     // Naive implementation - perhaps replace with getNextPrime(); ?
-                    if (isPrimeV0(i) == true)
+                    if(primeFinder.isPrime(i) == true)
                     {
                         if (A % i == 0)
                         {
                             A = A / i;
 
-                            primeFactors.Push(i);
+                            factors.Push(i);
 
                             bool rv = findFactors(A);
 
@@ -55,7 +56,7 @@ namespace bagOfClasses
                             }
                             else
                             {
-                                primeFactors.Pop();
+                                factors.Pop();
                             }
                         }
                     }
@@ -65,33 +66,5 @@ namespace bagOfClasses
             }
             return false;
         }
-
-        public bool isPrimeV0(int A)
-        {
-            if ((A == 2) || (A == 1))
-                return true;
-            else if (( A % 2 == 0 ) || (A % 5 == 0))
-            {
-                return false;
-            }
-            for(int i = 3; i <=  Math.Ceiling(Math.Sqrt(A)); i += 2)
-            {
-                if (A % i == 0)
-                {
-                    return false;
-                }
-            }
-
-        return true;
-        }
-
-        public bool isPrimeV1(int A)
-        {      
-            return true; 
-        }
-
-
-        
-
     }
 }
