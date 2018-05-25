@@ -11,12 +11,6 @@ namespace bagOfClassesUnitTests
 {
     public class PrimeFactorFinderTester
     {
-        [Fact]
-        public void AddTest()
-        {
-            Assert.Equal(4, Add(2, 2));
-        }
-
         [Theory] 
         [InlineData(37, 37)]
         [InlineData(41, 123)]
@@ -30,11 +24,5 @@ namespace bagOfClassesUnitTests
 
             Assert.Equal(desiredResult, result);
         }
-
-        int Add(int x, int y)
-        {
-            return x + y; 
-        }
-
     }
 }
