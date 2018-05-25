@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace bagOfClasses
-{
+{   
     public static class StringReverse
     {
         public static string inPlace(string input)

@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParenValidatorTester.cs" />
     <Compile Include="PrimeFactorFinderTester.cs" />
     <Compile Include="PrimeFinderTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
