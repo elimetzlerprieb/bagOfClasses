@@ -26,6 +26,28 @@ namespace bagOfClasses
             return true;
         }
 
+        public int[] GeneratePrimes(int max)
+        {
+            List<int> set = new List<int>();
+            
+            for (int i = 0; i < max -1; i++)
+            {
+                set.Add(i);
+            }
+
+            for (int a = 2; a <= Math.Ceiling(Math.Sqrt(max)); a++)
+            {
+                set.RemoveAll(x => (x % a == 0) && (x != a));
+            }
+
+            return set.ToArray();
+        }
+
+
+
+
+
+
         public bool IsPrime(long A)
         {
             int val = (int)A;
