@@ -58,12 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PalindromeExtensions.cs" />
     <Compile Include="ParenValidator.cs" />
     <Compile Include="PrimeFactorFinder.cs" />
     <Compile Include="PrimeFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringReverse.cs" />
+    <Compile Include="WeatherCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
