@@ -17,7 +17,7 @@ namespace bagOfClassesUnitTests
         [InlineData("ABCDCBA")]
         public void ShouldReturnTrueIfPalindromeString(string input)
         {
-            Assert.True(input.isPalindrome());
+            Assert.True(input.IsPalindrome());
         }
 
         [Theory]
@@ -27,7 +27,7 @@ namespace bagOfClassesUnitTests
         [InlineData(12344321)]
         public void ShouldReturnTrueIfPalindromeInt(int input)
         {
-            Assert.True(input.isPalindrome());
+            Assert.True(input.IsPalindrome());
         }
 
     }

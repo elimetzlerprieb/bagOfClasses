@@ -8,7 +8,7 @@ namespace bagOfClasses
 {
     public class PrimeFinder
     {
-        public bool isPrime(int A)
+        public bool IsPrime(int A)
         {
             if ((A == 2) || (A == 1))
                 return true;
@@ -26,10 +26,10 @@ namespace bagOfClasses
             return true;
         }
 
-        public bool isPrime(long A)
+        public bool IsPrime(long A)
         {
             int val = (int)A;
-            return isPrime(val);
+            return IsPrime(val);
         }
     }
 }

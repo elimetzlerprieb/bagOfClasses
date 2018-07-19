@@ -8,7 +8,7 @@ namespace bagOfClasses
 {
     public static class ParenValidator
     {
-        public static bool isValid(string input)
+        public static bool IsValid(string input)
         {
             Stack<char> stack = new Stack<char>();
 

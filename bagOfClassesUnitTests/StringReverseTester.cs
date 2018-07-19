@@ -18,7 +18,7 @@ namespace bagOfClassesUnitTests
 
         public void ReverseString_InPlace(string inputString, string reversedString)
         {
-            string generatedString = StringReverse.inPlace(inputString);
+            string generatedString = StringReverse.InPlace(inputString);
             Assert.Equal(reversedString, generatedString);
         }
 
@@ -29,7 +29,7 @@ namespace bagOfClassesUnitTests
 
         public void ReverseString_WithBUffer(string inputString, string reversedString)
         {
-            string generatedString = StringReverse.withBuffer(inputString);
+            string generatedString = StringReverse.WithBuffer(inputString);
             Assert.Equal(reversedString, generatedString);
         }
 

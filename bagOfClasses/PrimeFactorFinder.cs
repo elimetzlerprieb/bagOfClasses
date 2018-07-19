@@ -12,23 +12,23 @@ namespace bagOfClasses
 
         PrimeFinder primeFinder = new PrimeFinder();
 
-        public Stack<long> getPrimeFactors(long A)
+        public Stack<long> GetPrimeFactors(long A)
         {
-            findFactors(A);
+            FindFactors(A);
             return factors;
         }
 
-        public long getLargestPrimeFactor(long A)
+        public long GetLargestPrimeFactor(long A)
         {
-            findFactors(A);
+            FindFactors(A);
             return factors.Max();
         }
 
-        private bool findFactors(long A)
+        private bool FindFactors(long A)
         {
             // base case : A is prime therefore A is a factor 
 
-            if(primeFinder.isPrime(A) == true)
+            if(primeFinder.IsPrime(A) == true)
             {
                 factors.Push(A);
                 return true;
@@ -40,7 +40,7 @@ namespace bagOfClasses
                 while ( i < (A / 2))
                 {
                     // Naive implementation - perhaps replace with getNextPrime(); ?
-                    if(primeFinder.isPrime(i) == true)
+                    if(primeFinder.IsPrime(i) == true)
                     {
                         if (A % i == 0)
                         {
@@ -48,7 +48,7 @@ namespace bagOfClasses
 
                             factors.Push(i);
 
-                            bool rv = findFactors(A);
+                            bool rv = FindFactors(A);
 
                             if (rv == true)
                             {

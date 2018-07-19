@@ -20,7 +20,7 @@ namespace bagOfClassesUnitTests
         public void isPrimeShouldReturnTrueForPrimes(int value)
         {
             PrimeFinder primeFinder = new bagOfClasses.PrimeFinder();
-            Assert.True(primeFinder.isPrime(value));
+            Assert.True(primeFinder.IsPrime(value));
         }
 
         [Theory]
@@ -33,7 +33,7 @@ namespace bagOfClassesUnitTests
         public void isPrimeShouldReturnFalseForNonPrimes(int value)
         {
             PrimeFinder primeFinder = new bagOfClasses.PrimeFinder();
-            Assert.False(primeFinder.isPrime(value));
+            Assert.False(primeFinder.IsPrime(value));
         }
     }
 }

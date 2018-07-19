@@ -19,7 +19,7 @@ namespace bagOfClassesUnitTests
         public void shouldReturnLargestPrimeFactor(int desiredResult, int input)
         {
             PrimeFactorFinder primeFactorFinder = new PrimeFactorFinder();
-            Stack<long> factors = primeFactorFinder.getPrimeFactors(input);
+            Stack<long> factors = primeFactorFinder.GetPrimeFactors(input);
             long result = factors.Max();
 
             Assert.Equal(desiredResult, result);

@@ -17,7 +17,7 @@ namespace bagOfClassesUnitTests
         [InlineData("()(((()))())")]
         public void returnTrueForValidParentheses(string input)
         {
-            bool shouldBeTrue = ParenValidator.isValid(input);
+            bool shouldBeTrue = ParenValidator.IsValid(input);
             Assert.True(shouldBeTrue);
         }
 
@@ -27,7 +27,7 @@ namespace bagOfClassesUnitTests
         [InlineData("()(((()))()))")]
         public void returnFalseForInvalidParentheses(string input)
         {
-            bool shouldBeFalse = ParenValidator.isValid(input);
+            bool shouldBeFalse = ParenValidator.IsValid(input);
             Assert.False(shouldBeFalse);
         }
 

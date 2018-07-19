@@ -8,7 +8,7 @@ namespace bagOfClasses
 {   
     public static class StringReverse
     {
-        public static string inPlace(string input)
+        public static string InPlace(string input)
         {
             char[] workingArray = input.ToCharArray();
 
@@ -31,7 +31,7 @@ namespace bagOfClasses
             return output;
         }
 
-        public static string withBuffer(string inputString)
+        public static string WithBuffer(string inputString)
         {
             StringBuilder reversed = new StringBuilder("");
 
