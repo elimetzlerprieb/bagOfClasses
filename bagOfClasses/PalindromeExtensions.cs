@@ -8,6 +8,7 @@ namespace bagOfClasses
 {
     public class LargestPalindrome
     {
+        // Euler 4: Finds largest palindrome that is a product of two 3 digit integerss
         public long Find()
         {
             long i = 999;
